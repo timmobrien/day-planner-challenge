@@ -15,8 +15,6 @@ function createTimeBlock(hour) {
   const row = $("<div>");
   const currentHour = Number(moment().format("H"));
   
-
-  
   // past -- hour < current hour
   const isPast = hour < currentHour;
   // present -- current hour === hour
@@ -25,7 +23,7 @@ function createTimeBlock(hour) {
   const isFuture = hour > currentHour;
 
   // Creating a variable for the row classes so we can add the colours 
-  let rowClass = 'row justify-content-center align-items-center ';
+  let rowClass = 'row justify-content-center align-items-center m-1 rounded ';
 
   // Adding colour classes depending on when the block is
   if (isPast) {rowClass = rowClass + 'past'};
